@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thazin Win's Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .theme-switcher {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .light-theme {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .dark-theme {
+            background-color: #333;
+            color: #f9f9f9;
+        }
+
+        .theme-switcher.light {
+            background-color: #333;
+            color: #f9f9f9;
+        }
+
+        .theme-switcher.dark {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .theme-switcher {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <div class="container">
+        <h1>Thazin Win</h1>
+        <p>I am interested in learning new things.</p>
+        <button class="theme-switcher light" onclick="switchTheme()">Switch to Dark Theme</button>
+    </div>
+
+    <script>
+        function switchTheme() {
+            const body = document.body;
+            const button = document.querySelector('.theme-switcher');
+
+            if (body.classList.contains('light-theme')) {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+                button.classList.remove('light');
+                button.classList.add('dark');
+                button.textContent = 'Switch to Light Theme';
+            } else {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+                button.classList.remove('dark');
+                button.classList.add('light');
+                button.textContent = 'Switch to Dark Theme';
+            }
+        }
+    </script>
+</body>
+</html>
