@@ -80,22 +80,22 @@
     </div>
 
     <script>
-        function switchTheme() {
+        function switctheme() {
             const body = document.body;
             const button = document.querySelector('.theme-switcher');
 
             if (body.classList.contains('light-theme')) {
-                body.classList.remove('light-theme');
-                body.classList.add('dark-theme');
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
                 button.classList.remove('light');
                 button.classList.add('dark');
-                button.textContent = 'Switch to Light Theme';
+                button.textContent = 'Switch to Light mode';
             } else {
                 body.classList.remove('dark-theme');
                 body.classList.add('light-theme');
                 button.classList.remove('dark');
                 button.classList.add('light');
-                button.textContent = 'Switch to Dark Theme';
+                button.textContent = 'Switch to Dark mode';
             }
         }
     </script>
